@@ -9,16 +9,16 @@ public class BdConnect {
 	private static BdConnect bdconecta;
 	
 	public static BdConnect getInstance() {
-	if(bdconecta == null) {
-		bdconecta = new BdConnect();
-	}
-		return bdconecta;
-		
+		if(bdconecta == null) {
+			bdconecta = new BdConnect();
+		}
+			return bdconecta;
+			
 	}
 	
 	public Connection getConnection() throws ClassNotFoundException, SQLException{
 		Class.forName("com.mysql.jdbc.Driver");
-		String url = "jdbc:mysql://localhost:3306/agenda";
+		String url = "jdbc:mysql://localhost:3306/java";
 		String user = "root";
 		String pass = "";
 		return DriverManager.getConnection(url,user,pass);
